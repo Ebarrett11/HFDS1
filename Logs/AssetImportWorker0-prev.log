@@ -11,13 +11,13 @@ C:\2022.3.12f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Emmett/HandsFree/HFDS1/HFDS1
+C:/Users/Emmett/HandsFree/HFDS1
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55210
-Successfully changed project path to: C:/Users/Emmett/HandsFree/HFDS1/HFDS1
-C:/Users/Emmett/HandsFree/HFDS1/HFDS1
+50954
+Successfully changed project path to: C:/Users/Emmett/HandsFree/HFDS1
+C:/Users/Emmett/HandsFree/HFDS1
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,16 +49,16 @@ C:/Users/Emmett/HandsFree/HFDS1/HFDS1
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [9508] Host "[IP] 35.11.171.176 [Port] 0 [Flags] 2 [Guid] 3032232538 [EditorId] 3032232538 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-TM34CTQ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [13520] Host "[IP] 35.11.171.176 [Port] 0 [Flags] 2 [Guid] 1086381500 [EditorId] 1086381500 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-TM34CTQ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [9508] Host "[IP] 35.11.171.176 [Port] 0 [Flags] 2 [Guid] 3032232538 [EditorId] 3032232538 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-TM34CTQ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [13520] Host "[IP] 35.11.171.176 [Port] 0 [Flags] 2 [Guid] 1086381500 [EditorId] 1086381500 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-TM34CTQ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 3 workers.
-Refreshing native plugins compatible for Editor in 13.81 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 24.48 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.12f1 (4fe6e059c7ef)
 [Subsystems] Discovering subsystems at path C:/2022.3.12f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Emmett/HandsFree/HFDS1/HFDS1/Assets
+[Subsystems] Discovering subsystems at path C:/Users/Emmett/HandsFree/HFDS1/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -70,620 +70,404 @@ Initialize mono
 Mono path[0] = 'C:/2022.3.12f1/Editor/Data/Managed'
 Mono path[1] = 'C:/2022.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/2022.3.12f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56928
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56208
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/2022.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.015654 seconds.
-- Loaded All Assemblies, in  0.563 seconds
+Registered in 0.008546 seconds.
+- Loaded All Assemblies, in  1.213 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.424 seconds
-Domain Reload Profiling: 984ms
-	BeginReloadAssembly (176ms)
+- Finished resetting the current domain, in  0.409 seconds
+Domain Reload Profiling: 1620ms
+	BeginReloadAssembly (250ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (57ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (100ms)
-	LoadAllAssembliesAndSetupDomain (210ms)
-		LoadAssemblies (173ms)
+	RebuildCommonClasses (73ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (591ms)
+	LoadAllAssembliesAndSetupDomain (280ms)
+		LoadAssemblies (247ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (207ms)
-			TypeCache.Refresh (205ms)
-				TypeCache.ScanAssembly (183ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (424ms)
+		AnalyzeDomain (278ms)
+			TypeCache.Refresh (275ms)
+				TypeCache.ScanAssembly (195ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (409ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (311ms)
+		SetupLoadedEditorAssemblies (314ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (13ms)
-			SetLoadedEditorAssemblies (10ms)
+			SetLoadedEditorAssemblies (11ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (217ms)
-			ProcessInitializeOnLoadMethodAttributes (68ms)
+			BeforeProcessingInitializeOnLoad (5ms)
+			ProcessInitializeOnLoadAttributes (208ms)
+			ProcessInitializeOnLoadMethodAttributes (78ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
+Script 'Packages/com.unity.ai.navigation/Runtime/HelpUrls.cs' will not be compiled because it exists outside the Assets folder and does not to belong to any assembly definition file.
 ========================================================================
 Worker process is ready to serve import requests
+Script 'Packages/com.unity.ai.navigation/Runtime/HelpUrls.cs' will not be compiled because it exists outside the Assets folder and does not to belong to any assembly definition file.
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.881 seconds
-Refreshing native plugins compatible for Editor in 3.74 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.046 seconds
+Refreshing native plugins compatible for Editor in 3.71 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
+Script 'Packages/com.unity.ai.navigation/Runtime/HelpUrls.cs' will not be compiled because it exists outside the Assets folder and does not to belong to any assembly definition file.
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.036 seconds
-Domain Reload Profiling: 1913ms
-	BeginReloadAssembly (270ms)
+- Finished resetting the current domain, in  1.263 seconds
+Domain Reload Profiling: 2305ms
+	BeginReloadAssembly (242ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (7ms)
+		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (36ms)
+		CreateAndSetChildDomain (30ms)
 	RebuildCommonClasses (48ms)
 	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (53ms)
-	LoadAllAssembliesAndSetupDomain (491ms)
-		LoadAssemblies (387ms)
+	initialDomainReloadingComplete (60ms)
+	LoadAllAssembliesAndSetupDomain (676ms)
+		LoadAssemblies (562ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (222ms)
-			TypeCache.Refresh (198ms)
-				TypeCache.ScanAssembly (181ms)
-			ScanForSourceGeneratedMonoScriptInfo (18ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (1036ms)
+		AnalyzeDomain (262ms)
+			TypeCache.Refresh (228ms)
+				TypeCache.ScanAssembly (208ms)
+			ScanForSourceGeneratedMonoScriptInfo (22ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1263ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (840ms)
+		SetupLoadedEditorAssemblies (1009ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (83ms)
-			ProcessInitializeOnLoadAttributes (697ms)
-			ProcessInitializeOnLoadMethodAttributes (37ms)
-			AfterProcessingInitializeOnLoad (9ms)
+			BeforeProcessingInitializeOnLoad (106ms)
+			ProcessInitializeOnLoadAttributes (843ms)
+			ProcessInitializeOnLoadMethodAttributes (33ms)
+			AfterProcessingInitializeOnLoad (11ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (14ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 5.08 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.61 seconds
+Refreshing native plugins compatible for Editor in 7.89 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3089 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (57.2 KB). Loaded Objects now: 3552.
-Memory consumption went from 120.7 MB to 120.6 MB.
-Total: 3.451000 ms (FindLiveObjects: 0.258400 ms CreateObjectMapping: 0.231000 ms MarkObjects: 2.856300 ms  DeleteObjects: 0.104100 ms)
+Unloading 3111 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (56.9 KB). Loaded Objects now: 3574.
+Memory consumption went from 121.1 MB to 121.1 MB.
+Total: 5.050600 ms (FindLiveObjects: 0.289900 ms CreateObjectMapping: 0.315800 ms MarkObjects: 4.336900 ms  DeleteObjects: 0.106300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/NavMeshSurface.cs: 133003a922db579014bce4fcf4c40278 -> 
+  custom:scripting/monoscript/fileName/NavMeshSurfaceTests.cs: 8f67c389d0b679d28e5a3c038c225ed9 -> 
+  custom:scripting/precompiled-assembly-types:NavMeshComponentsTestsEditmode: 76b08fe59f7efc5f9e727de7129be9a1 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/precompiled-assembly-types:NavMeshComponentsTestsPlaymode: dcce66b5587a368d0143064a03f1403b -> 
+  custom:scripting/monoscript/fileName/NavMeshModifierVolumeEditor.cs: 920c8ae3edcaf7d74284fc32a21472ed -> 
+  custom:scripting/monoscript/fileName/LocalNavMeshBuilder.cs: 28f1eda5f0a0a3cd51d435e7b32a3041 -> 
+  custom:scripting/monoscript/fileName/NavMeshPrefabInstance.cs: deb4174c2c6dc593062e8432ba997ae3 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/precompiled-assembly-types:NavMeshComponents: ebaa9cbcf8060cf9ff7f19d2e7ec0189 -> 
+  custom:scripting/monoscript/fileName/AgentLinkMover.cs: 898dbfc1b14fcef85c312f44f5d96bf6 -> 
+  custom:scripting/monoscript/fileName/RandomInstancing.cs: 58742adcc7ff1feca0f10c80ffb55fbb -> 
+  custom:scripting/monoscript/fileName/NavMeshComponentsGUIUtility.cs: 967405f6a06d8f9666eb71e4ea8335fe -> 
+  custom:scripting/precompiled-assembly-types:NavMeshComponentsExamples: 9009a89898304d7d320768f8226f7ae4 -> 
+  custom:scripting/monoscript/fileName/NavMeshSurfaceInPrefabVariantTests.cs: 1a297b729b7e9eab450ce3388cb709df -> 
+  custom:scripting/monoscript/fileName/NavMeshSurfaceLinkTests.cs: 433967ea065d4b03e539201c3d818767 -> 
   custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:scripting/monoscript/fileName/MeshTool.cs: fb77b6fc2fce448c42f3158e8d133b60 -> 
+  custom:scripting/precompiled-assembly-types:NavMeshComponentsExamplesEditor: d60cf931e84491529841532d34705f60 -> 
+  custom:scripting/monoscript/fileName/NavMeshAssetManager.cs: 513c185860a601dd098e8f657d06a567 -> 
+  custom:scripting/monoscript/fileName/NavMeshSurfaceEditor.cs: 284fd358892099d0b94b895d4e5b513d -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/FreeCam.cs: 6b01d577e90acaf7e0ead3c87dd49dd1 -> 
+  custom:scripting/monoscript/fileName/SpawnPrefabOnKeyDown.cs: a05650ca420937f95815db3ebaee0779 -> 
+  custom:scripting/monoscript/fileName/NavMeshModifierVolume.cs: 2bd168efa6085aee7bdf912b56a6a9b9 -> 
+  custom:scripting/monoscript/fileName/NavMeshSurfaceModifierTests.cs: a711cce457126530aa584a848ed381de -> 
+  custom:scripting/monoscript/fileName/DungeonManager.cs: bcbdad6755567b873fc0811c5a775156 -> 
+  custom:scripting/monoscript/fileName/PrefabSavingUtil.cs: dc5bca31de04fb607a04f3513d456571 -> 
+  custom:scripting/monoscript/fileName/NavMeshSurfaceModifierVolumeTests.cs: cd9125a6560d3d1f49d05655a3934bdb -> 
+  custom:scripting/monoscript/fileName/NavMeshModifierEditor.cs: da9509a28f329dec7cf87140d1956ea8 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/EnableIffSleeping.cs: b77d52bb40ead26676c168b24bbf3357 -> 
+  custom:scripting/monoscript/fileName/NavMeshPrefabInstanceEditor.cs: 80ee246ae4439d87a52f9320f89b9729 -> 
+  custom:scripting/monoscript/fileName/ClickToMove.cs: 9e07310c054aaef348ffbd9a36e2a821 -> 
   custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/NavMeshLinkEditor.cs: 8a1578246d6f7f9b9d18cac277c25cf8 -> 
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/NavMeshModifier.cs: dca698c9c0bcabdc50ed96b696f5de98 -> 
+  custom:scripting/precompiled-assembly-types:NavMeshComponentsEditor: 13363b894ff34b870a39a7493c26cd30 -> 
+  custom:scripting/monoscript/fileName/NavMeshLink.cs: feacb534a560f2a44ee7dd86d4923e5e -> 
+  custom:scripting/monoscript/fileName/NavMeshSurfaceAgentTests.cs: 912f1bad38a7cd268e7d6d69da4aead0 -> 
+  custom:scripting/monoscript/fileName/Oscillator.cs: 8707363efc17ce2e266897b86cf8b114 -> 
+  custom:scripting/monoscript/fileName/NavMeshSurfaceInPrefabTests.cs: 069b546e7dab8cee27913bbceef93176 -> 
+  custom:scripting/monoscript/fileName/RandomWalk.cs: c3dc398e2a4c95c63acbc3e29a22ca94 -> 
+  custom:scripting/monoscript/fileName/NavMeshSourceTag.cs: 20448ff45c032815eca675b2431a9464 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/NavMeshModifierVolumeInPrefabTests.cs: 985efd3c92c5b891b5702ca213567462 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/PrefabStageAutoSavingUtil.cs: c02e5118467fac2181efb8d6079f0e65 -> 
+  custom:scripting/monoscript/fileName/DestroyOnTrigger.cs: 6d533e1c5b472e3fffdc0739939c57cc -> 
+  custom:scripting/monoscript/fileName/ConverterItemDescriptor.cs:  -> 8182050d34c5cb602eb7913435a7abee
+  custom:scripting/monoscript/fileName/ConverterItemInfo.cs:  -> 9fb131dfa28a9ed6b6d00fd9cf83ece4
+  custom:scripting/precompiled-assembly-types:Unity.AI.Navigation.Editor.ConversionSystem:  -> 27c718e5de2659aeeb663e092dc21158
+  custom:scripting/monoscript/fileName/EditorStyles.cs:  -> 86b9f4d8fe570a8d8295bfc466c975cf
+  custom:scripting/monoscript/fileName/SystemConverterContainer.cs:  -> eb4026ea01a117ce0888f693e9eed2cd
+  custom:scripting/monoscript/fileName/InitializeConverterContext.cs:  -> a97e19589a5774cdc2a34a28caea355f
+  custom:scripting/monoscript/fileName/SystemConverter.cs:  -> c748d1769fc66e95256254a1cc1497f3
+  custom:scripting/monoscript/fileName/RunItemContext.cs:  -> 338b2243183036c2b60f94c1b5e817c5
+  custom:scripting/monoscript/fileName/SystemConvertersEditor.cs:  -> c127c1335f24b77ca70195bf2136c6a2
 ========================================================================
 Received Import Request.
-  Time since last request: 1001258.501781 seconds.
+  Time since last request: 1019195.493847 seconds.
   path: Assets/CarAI/Scenes/demo.unity
   artifactKey: Guid(adc3789d1c0aa4e4a957a136012a7350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/Scenes/demo.unity using Guid(adc3789d1c0aa4e4a957a136012a7350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83c3df13183e027f718d90783a1acd09') in 0.002981 seconds
+Start importing Assets/CarAI/Scenes/demo.unity using Guid(adc3789d1c0aa4e4a957a136012a7350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83c3df13183e027f718d90783a1acd09') in 0.003699 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/CarAI/Scenes
-  artifactKey: Guid(2d6d04967877edc4aaa449e51aa19350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/Scenes using Guid(2d6d04967877edc4aaa449e51aa19350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc2f5bbbb5cad67925f2dc878c189e98') in 0.000558 seconds
+  Time since last request: 52.010132 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay.png
+  artifactKey: Guid(6a986a181c9bc6043b057a3d15edbaad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay.png using Guid(6a986a181c9bc6043b057a3d15edbaad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28c7dd8f95c31b1fa37e2fab261e184f') in 0.111561 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/CarAI/Scenes/demo/NavMesh-NavMesh.asset
-  artifactKey: Guid(b3f12b5476ca7e84d9a3b58dad9ae483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/Scenes/demo/NavMesh-NavMesh.asset using Guid(b3f12b5476ca7e84d9a3b58dad9ae483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb5e0721104eb1740d381dce4267e30d') in 0.009237 seconds
+  Time since last request: 0.000016 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@128.png
+  artifactKey: Guid(5b2a8a1e265e99b4fb8d77061490f397) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@128.png using Guid(5b2a8a1e265e99b4fb8d77061490f397) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66bf768c45e1efb14357e66c7621d560') in 0.189975 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000709 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On.png
+  artifactKey: Guid(5c5ac68c1bc4e104f9e987b9d1da4556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On.png using Guid(5c5ac68c1bc4e104f9e987b9d1da4556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0baff65a13a1fc9be6a3dc9b06310acf') in 0.083938 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@32.png
+  artifactKey: Guid(6f3c566cd9f63c9408d201ea50b51444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@32.png using Guid(6f3c566cd9f63c9408d201ea50b51444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbbb2e2808e73e8bf7bf712ef2437bd4') in 0.185696 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@32.png
+  artifactKey: Guid(b8a654e77ffbbcd4abdda7fdb70fbb9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@32.png using Guid(b8a654e77ffbbcd4abdda7fdb70fbb9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa5d2e145a116e4775995dcb754de9e7') in 0.033044 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@128.png
+  artifactKey: Guid(80899a9fbe3d3364eac2c5924c0a28cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@128.png using Guid(80899a9fbe3d3364eac2c5924c0a28cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05717db4a0dcb2704bcb1cfedb09ee73') in 0.066922 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@128.png
+  artifactKey: Guid(1b6bf0e7b03fea94987a73d0cb14781b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@128.png using Guid(1b6bf0e7b03fea94987a73d0cb14781b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4ab473e63a243cdc4a5faa51c4afeaf') in 0.056372 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@128.png
+  artifactKey: Guid(44837f46c53a42246a6de7fa161e0d00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@128.png using Guid(44837f46c53a42246a6de7fa161e0d00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc6a0d7a52004a0492974792ce8e0e23') in 0.020865 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@16.png
+  artifactKey: Guid(1c89fbe185cd30b4584ab3d5476807eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@16.png using Guid(1c89fbe185cd30b4584ab3d5476807eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19db2e039e62cb906531e63c507a39d0') in 0.022481 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay.png
+  artifactKey: Guid(e3f0b16456276c94aab8bd6664208dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay.png using Guid(e3f0b16456276c94aab8bd6664208dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f4f5fd8a1ad732e11c9610eb4c14a04') in 0.033797 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@2x.png
+  artifactKey: Guid(334589c596cc053418f700189f91111c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@2x.png using Guid(334589c596cc053418f700189f91111c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01452fe8217a27a5170f8839b6b2ae1c') in 0.020206 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@256.png
+  artifactKey: Guid(b05e7d8dc2bdbb14ab5b1da240ac65d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@256.png using Guid(b05e7d8dc2bdbb14ab5b1da240ac65d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f49ec00e4ff78418d6305f47475083b') in 0.042566 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@32.png
+  artifactKey: Guid(f9a2f623ba32a844da6de770f5ccf17f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@32.png using Guid(f9a2f623ba32a844da6de770f5ccf17f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7e9c484edd2526ada039b6d22447e03') in 0.046418 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@256.png
+  artifactKey: Guid(642f7453935154b44afc516c07b1d009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@256.png using Guid(642f7453935154b44afc516c07b1d009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5171f5faf6efd41ab8ec5e415f192dd9') in 0.028984 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@2x.png
+  artifactKey: Guid(7d5867654fa2bf448b06f384143ceca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@2x.png using Guid(7d5867654fa2bf448b06f384143ceca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7e3ec1fa8557ddddd8ab706678114bd') in 0.021998 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On.png
+  artifactKey: Guid(c136efa5cc6d99a4d9e7bad0209aea25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On.png using Guid(c136efa5cc6d99a4d9e7bad0209aea25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '400c399ae3aab9e96ff16752c43e47e2') in 0.020680 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@2x.png
+  artifactKey: Guid(a206ff0ddc681e642a2e62fc57a7d51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@2x.png using Guid(a206ff0ddc681e642a2e62fc57a7d51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '639a58979988549059017c765a99e75b') in 0.024147 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@16.png
+  artifactKey: Guid(96c9a57d95a712d44978703ea9dd7f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@16.png using Guid(96c9a57d95a712d44978703ea9dd7f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '918e261719b79c4bc12b80d8b61c3e8f') in 0.028965 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@64.png
+  artifactKey: Guid(fc46fceb4d1516544b7f503337211f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@64.png using Guid(fc46fceb4d1516544b7f503337211f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b34cd5f54ef2994a295e9cb4fca5d3a8') in 0.041027 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@32.png
+  artifactKey: Guid(f7a3e2b3beab29040bc1a68f0ad0045c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@32.png using Guid(f7a3e2b3beab29040bc1a68f0ad0045c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11ae530c5c4f43c2d306d821d7d51b81') in 0.026906 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@64.png
+  artifactKey: Guid(1dacc9e843ef1444fad71e40913ef05c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@64.png using Guid(1dacc9e843ef1444fad71e40913ef05c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8883b62612c06e00b6c9c36a5ce579ef') in 0.037484 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@16.png
+  artifactKey: Guid(8d8d1929f2279804e8a744d3da25e23b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@16.png using Guid(8d8d1929f2279804e8a744d3da25e23b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '596835d20914f6b5772b5f6f07211757') in 0.028847 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@256.png
+  artifactKey: Guid(f5dd88efd8622424998bf5326c5421eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@256.png using Guid(f5dd88efd8622424998bf5326c5421eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fbb3bed715a3e2702107eb3f2cefd4d') in 0.148066 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000953 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@2x.png
+  artifactKey: Guid(9d244ceb235342e4c8f308aa1f71be7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@2x.png using Guid(9d244ceb235342e4c8f308aa1f71be7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb4a11f92465ef1f310d109953a17825') in 0.065232 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@64.png
+  artifactKey: Guid(151753cf3d5916d4fbf624668c268675) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@64.png using Guid(151753cf3d5916d4fbf624668c268675) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de253403a6f97c994c9b6132051086a2') in 0.712869 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Packages/com.unity.ai.navigation/package.json
+  artifactKey: Guid(fbee67e09f48e4652bfa085460c895c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/package.json using Guid(fbee67e09f48e4652bfa085460c895c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11d7159fc75d751bc7b491c814f1f437') in 0.001596 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
   Time since last request: 0.000017 seconds.
-  path: Assets/CarAI/Scenes/demo
-  artifactKey: Guid(852821ed8ab1d97459ef49e0e6e7f377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/Scenes/demo using Guid(852821ed8ab1d97459ef49e0e6e7f377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cf73b78caa7ef86e75489bfab3f12f7') in 0.000438 seconds
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@16.png
+  artifactKey: Guid(731522d95656bec42a5fc0bdc672ebe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@16.png using Guid(731522d95656bec42a5fc0bdc672ebe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1a55fb10d951f7c165a7f2cfb8815a1') in 0.042332 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.598 seconds
-Refreshing native plugins compatible for Editor in 8.48 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.971 seconds
-Domain Reload Profiling: 2565ms
-	BeginReloadAssembly (190ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (7ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (40ms)
-	RebuildCommonClasses (50ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (46ms)
-	LoadAllAssembliesAndSetupDomain (286ms)
-		LoadAssemblies (381ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (14ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (1972ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (883ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (6ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (103ms)
-			ProcessInitializeOnLoadAttributes (722ms)
-			ProcessInitializeOnLoadMethodAttributes (31ms)
-			AfterProcessingInitializeOnLoad (12ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (16ms)
-Refreshing native plugins compatible for Editor in 4.79 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 23 unused Assets / (31.0 KB). Loaded Objects now: 3556.
-Memory consumption went from 121.4 MB to 121.4 MB.
-Total: 5.989800 ms (FindLiveObjects: 0.380300 ms CreateObjectMapping: 0.347100 ms MarkObjects: 5.211300 ms  DeleteObjects: 0.050200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.494 seconds
-Refreshing native plugins compatible for Editor in 3.59 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.832 seconds
-Domain Reload Profiling: 2324ms
-	BeginReloadAssembly (175ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (7ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (36ms)
-	RebuildCommonClasses (42ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (36ms)
-	LoadAllAssembliesAndSetupDomain (224ms)
-		LoadAssemblies (308ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (13ms)
-			TypeCache.Refresh (5ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (1833ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (988ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (7ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (93ms)
-			ProcessInitializeOnLoadAttributes (836ms)
-			ProcessInitializeOnLoadMethodAttributes (31ms)
-			AfterProcessingInitializeOnLoad (12ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (16ms)
-Refreshing native plugins compatible for Editor in 7.60 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 23 unused Assets / (31.0 KB). Loaded Objects now: 3559.
-Memory consumption went from 123.6 MB to 123.6 MB.
-Total: 4.685700 ms (FindLiveObjects: 0.313200 ms CreateObjectMapping: 0.365900 ms MarkObjects: 3.944600 ms  DeleteObjects: 0.060800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 39.927969 seconds.
-  path: Assets/CarAI/Scripts
-  artifactKey: Guid(f730b0c2746aa0542a2f7a7679b5432e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/Scripts using Guid(f730b0c2746aa0542a2f7a7679b5432e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f110cb78e00be578ad706829cb80f9c') in 0.001784 seconds
+  Time since last request: 0.000161 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@64.png
+  artifactKey: Guid(b3cd430fb0ffe164fa829262bb9e1d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@64.png using Guid(b3cd430fb0ffe164fa829262bb9e1d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '594018103941cb5a5542cc1f5433b93e') in 0.026132 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 1.538793 seconds.
-  path: Assets/CarAI/Scripts/SensorManager.cs
-  artifactKey: Guid(f0534c900278f434bad52a21640b05e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/Scripts/SensorManager.cs using Guid(f0534c900278f434bad52a21640b05e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06db5cd42cfef869e6a17750aef94bfc') in 0.000470 seconds
+  Time since last request: 0.000017 seconds.
+  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@256.png
+  artifactKey: Guid(1497075210b6dcd4c8f31ecfc6c5c79c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@256.png using Guid(1497075210b6dcd4c8f31ecfc6c5c79c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ac95c0d70d30a0adb7ab91ee8bd38ee') in 0.044533 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 4.354265 seconds.
-  path: Assets/CarAI/Scripts/controllingCarAI.cs
-  artifactKey: Guid(ac79dc69f5d5a5b47b6e0ad00255305e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/Scripts/controllingCarAI.cs using Guid(ac79dc69f5d5a5b47b6e0ad00255305e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17106a9af3d1094f61e0e718a164e925') in 0.000483 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.487315 seconds.
-  path: Assets/CarAI/Scripts/CarAI.cs
-  artifactKey: Guid(4528afd9ffccc8947bccc012bcff2732) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/Scripts/CarAI.cs using Guid(4528afd9ffccc8947bccc012bcff2732) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73baa755594df37830a2a8e4c49bb17d') in 0.000471 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 253.730663 seconds.
-  path: Assets/CarAI
-  artifactKey: Guid(f3d292c9a129f1e469ff0fd5104bc69f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI using Guid(f3d292c9a129f1e469ff0fd5104bc69f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74bdab86462bd251aa92a5e845f0154f') in 0.000433 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 2.593938 seconds.
-  path: Assets/CarAI/documentation.pdf
-  artifactKey: Guid(dda90467789cc684a942fa8760c21118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/documentation.pdf using Guid(dda90467789cc684a942fa8760c21118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0991cb5f13c07863defa89a1900b66b7') in 0.014821 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 8.937684 seconds.
-  path: Assets/CarAI/Readme.txt.txt
-  artifactKey: Guid(c9dd2091b6999554ca28ec0bf4935df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/Readme.txt.txt using Guid(c9dd2091b6999554ca28ec0bf4935df3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be2bfeedbfd3739102f74713a5878786') in 0.005084 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.972 seconds
-Refreshing native plugins compatible for Editor in 4.47 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.353 seconds
-Domain Reload Profiling: 2322ms
-	BeginReloadAssembly (507ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (17ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (57ms)
-	RebuildCommonClasses (56ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (345ms)
-		LoadAssemblies (704ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (28ms)
-			TypeCache.Refresh (11ms)
-				TypeCache.ScanAssembly (2ms)
-			ScanForSourceGeneratedMonoScriptInfo (10ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (1354ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (796ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (5ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (140ms)
-			ProcessInitializeOnLoadAttributes (612ms)
-			ProcessInitializeOnLoadMethodAttributes (23ms)
-			AfterProcessingInitializeOnLoad (9ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Refreshing native plugins compatible for Editor in 4.36 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3116 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 23 unused Assets / (31.1 KB). Loaded Objects now: 3597.
-Memory consumption went from 126.1 MB to 126.1 MB.
-Total: 3.492600 ms (FindLiveObjects: 0.253300 ms CreateObjectMapping: 0.249300 ms MarkObjects: 2.942600 ms  DeleteObjects: 0.046200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 243.592330 seconds.
-  path: Assets/CarAI/NavMeshComponents-master
-  artifactKey: Guid(7b226146d64d6704f8e6fb5d00697770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master using Guid(7b226146d64d6704f8e6fb5d00697770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48d41d3a6199b2eeadb42faa2b30bc95') in 0.001933 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 2.037086 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings
-  artifactKey: Guid(7bd3dc539ecbdd64185b6835c3dde839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings using Guid(7bd3dc539ecbdd64185b6835c3dde839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c075981eea187137b4f3ca7f42be0596') in 0.000443 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.059974 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/AudioManager.asset
-  artifactKey: Guid(266a79c1d9017f54985fee7d82dbb437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/AudioManager.asset using Guid(266a79c1d9017f54985fee7d82dbb437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bc4ea18359391e1ca2e594d3408ed55') in 0.000865 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.001955 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/ClusterInputManager.asset
-  artifactKey: Guid(60cf57fc1599d2246b47a971c55ce75b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/ClusterInputManager.asset using Guid(60cf57fc1599d2246b47a971c55ce75b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd421028c16a85e7c281e8cab09cc6e16') in 0.000822 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.002095 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/DynamicsManager.asset
-  artifactKey: Guid(1c19f94f28642d7479ff46324982f05a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/DynamicsManager.asset using Guid(1c19f94f28642d7479ff46324982f05a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21d2febed3f8e15eecf89737aff2bedf') in 0.000815 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.002142 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/EditorBuildSettings.asset
-  artifactKey: Guid(0a7c65565134d5043a78ae60e5f47551) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/EditorBuildSettings.asset using Guid(0a7c65565134d5043a78ae60e5f47551) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31403d61f5fafdb3478cc93c307598f1') in 0.000973 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.002111 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/EditorSettings.asset
-  artifactKey: Guid(19369cb3b5556b94bb555b2fa22c82c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/EditorSettings.asset using Guid(19369cb3b5556b94bb555b2fa22c82c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92e3b00039a0a3a406b0d4b031499546') in 0.000832 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.002169 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/GraphicsSettings.asset
-  artifactKey: Guid(c0b5f34a265a148408f83561e25b1940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/GraphicsSettings.asset using Guid(c0b5f34a265a148408f83561e25b1940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd326a2db0a8bd9236e43c38f45268511') in 0.000849 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.002373 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/InputManager.asset
-  artifactKey: Guid(299f14d6d3c6bc447a4e291f941e5bfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/InputManager.asset using Guid(299f14d6d3c6bc447a4e291f941e5bfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09caa35cd8a2c957e5ae8b3b1cb5f08d') in 0.000900 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.002069 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/NavMeshAreas.asset
-  artifactKey: Guid(f70ef2fe7eca1154d8e66e4a8e6b74ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/NavMeshAreas.asset using Guid(f70ef2fe7eca1154d8e66e4a8e6b74ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b7179fac43faf99ce84cdf5a9f937b0') in 0.000866 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.002175 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/NetworkManager.asset
-  artifactKey: Guid(2872d163683eff24bbccf779f7fdf442) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/NetworkManager.asset using Guid(2872d163683eff24bbccf779f7fdf442) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1366533dd5ad7f223139e4d12816e15e') in 0.000872 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.002182 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/Physics2DSettings.asset
-  artifactKey: Guid(c33c3bf332942d24cbce3ec098bf1b14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/Physics2DSettings.asset using Guid(c33c3bf332942d24cbce3ec098bf1b14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2515ecefcbb36f122cf8115201d9aa21') in 0.000899 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.002259 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/PresetManager.asset
-  artifactKey: Guid(7457ba699a48fe443a690749e367b73f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/PresetManager.asset using Guid(7457ba699a48fe443a690749e367b73f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ef5e99f352cbcaff0376e59089d18f4') in 0.000831 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.002256 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/ProjectSettings.asset
-  artifactKey: Guid(56ed6d09acd6b4441822204f5c11b060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/ProjectSettings.asset using Guid(56ed6d09acd6b4441822204f5c11b060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9393fdaec0688a82648c4a6d3be6b44e') in 0.000929 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.008271 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/QualitySettings.asset
-  artifactKey: Guid(9a848afdeb868f94cb7d75586c83fe45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/QualitySettings.asset using Guid(9a848afdeb868f94cb7d75586c83fe45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '787ccb766c648efda97d1c3823a8b652') in 0.000859 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.002140 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/TagManager.asset
-  artifactKey: Guid(e36ca11374bf3f4448313001e8b54f55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/TagManager.asset using Guid(e36ca11374bf3f4448313001e8b54f55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a657addb928da20b58cb771fa4a0a46') in 0.000809 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.002217 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/TimeManager.asset
-  artifactKey: Guid(538174e55056b834ba1a1b7953ced3ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/TimeManager.asset using Guid(538174e55056b834ba1a1b7953ced3ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f2540a2326c426bf3dc7108f2f24eaf') in 0.000842 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.002209 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/UnityConnectSettings.asset
-  artifactKey: Guid(ec4a97a2ca3478f42919e380cbbbd86e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/UnityConnectSettings.asset using Guid(ec4a97a2ca3478f42919e380cbbbd86e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0577a17f3c97ad3a88e428ff727861b3') in 0.000791 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.002448 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/VFXManager.asset
-  artifactKey: Guid(36781d6ff4b9f57469e4fed8d134a3e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/VFXManager.asset using Guid(36781d6ff4b9f57469e4fed8d134a3e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '107415c75470c6ec0a58110395828b33') in 0.000819 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.002351 seconds.
-  path: Assets/CarAI/NavMeshComponents-master/ProjectSettings/XRSettings.asset
-  artifactKey: Guid(4be4798cb4275b9459f373b01435409e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CarAI/NavMeshComponents-master/ProjectSettings/XRSettings.asset using Guid(4be4798cb4275b9459f373b01435409e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Failed to load 'C:/Users/Emmett/HandsFree/HFDS1/HFDS1/Assets/CarAI/NavMeshComponents-master/ProjectSettings/XRSettings.asset'. File may be corrupted or was serialized with a newer version of Unity.
- -> (artifact id: 'c6112f46f81e7163d6494eac84d0093f') in 0.000937 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.634 seconds
-Refreshing native plugins compatible for Editor in 4.27 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.857 seconds
-Domain Reload Profiling: 2488ms
-	BeginReloadAssembly (198ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (43ms)
-	RebuildCommonClasses (131ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (34ms)
-	LoadAllAssembliesAndSetupDomain (250ms)
-		LoadAssemblies (345ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (13ms)
-			TypeCache.Refresh (6ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (1858ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (858ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (8ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (102ms)
-			ProcessInitializeOnLoadAttributes (709ms)
-			ProcessInitializeOnLoadMethodAttributes (23ms)
-			AfterProcessingInitializeOnLoad (9ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
-Refreshing native plugins compatible for Editor in 3.58 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3116 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 23 unused Assets / (31.0 KB). Loaded Objects now: 3600.
-Memory consumption went from 128.1 MB to 128.0 MB.
-Total: 4.103200 ms (FindLiveObjects: 0.241800 ms CreateObjectMapping: 0.208100 ms MarkObjects: 3.601600 ms  DeleteObjects: 0.050500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Number of asset objects unloaded after import = 2
