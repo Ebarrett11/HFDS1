@@ -61,10 +61,43 @@ public class CarAI : MonoBehaviour
 
     void FixedUpdate()
     {
-        UpdateWheels();
-        ApplySteering();
-        PathProgress();
+
+       
+
+        //if(Input.GetKey("w")){
+                      
+
+        //    UpdateWheels();
+        //    //ApplySteering();
+        //    //PathProgress();
+        //    backRight.motorTorque = 400 * MovementTorque;
+        //    backLeft.motorTorque = 400 * MovementTorque;
+        //    frontRight.motorTorque = 400 * MovementTorque;
+        //    frontLeft.motorTorque = 400 * MovementTorque;
+        //    //UpdateWheels();
+        //    //ApplySteering();
+        //    //PathProgress();
+        //    Debug.Log("w");
+        //}
+        //else
+        //{
+            UpdateWheels();
+            ApplySteering();
+            PathProgress();
+        //}
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Construction")
+        {
+            Debug.Log("a");
+            move = false;
+        }
+    }
+
+    
+    
 
     private void CalculateNavMashLayerBite()
     {
@@ -283,6 +316,7 @@ public class CarAI : MonoBehaviour
         frontLeft.steerAngle = SteeringAngle;
         frontRight.steerAngle = SteeringAngle;
     }
+
 
     void Movement() // moves the car forward and backward depending on the input
     {

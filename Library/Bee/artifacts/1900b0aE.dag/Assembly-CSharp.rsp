@@ -359,6 +359,7 @@
 "Assets/CarAI/Scripts/CarAI.cs"
 "Assets/CarAI/Scripts/controllingCarAI.cs"
 "Assets/CarAI/Scripts/SensorManager.cs"
+"Assets/CarPath.cs"
 "Assets/PROMETEO - Car Controller/Scripts/CameraFollow.cs"
 "Assets/PROMETEO - Car Controller/Scripts/PrometeoCarController.cs"
 "Assets/PROMETEO - Car Controller/Scripts/PrometeoTouchInput.cs"
