@@ -21,7 +21,7 @@ public class CarAI : MonoBehaviour
     [Header("Car Front (Transform)")]// Assign a Gameobject representing the front of the car
     public Transform carFront;
 
-    [Header("General Parameters")]// Look at the documentation for a detailed explanation 
+    [Header("General Parameters")]// Look at the documentation for a detailed explanation
     public List<string> NavMeshLayers;
     public int MaxSteeringAngle = 45;
     public int MaxRPM = 150;
@@ -33,6 +33,8 @@ public class CarAI : MonoBehaviour
     [Header("Destination Parameters")]// Look at the documentation for a detailed explanation
     public bool Patrol = true;
     public Transform CustomDestination;
+    public GameObject steeringWheel;
+    public bool ConstructionZone = false;
 
     [HideInInspector] public bool move;// Look at the documentation for a detailed explanation
 
@@ -45,7 +47,8 @@ public class CarAI : MonoBehaviour
     private float LocalMaxSpeed;
     private int Fails;
     private float MovementTorque = 1;
-
+    private bool hfds = false;
+    private Rigidbody rb;
     void Awake()
     {
         currentWayPoint = 0;
@@ -57,47 +60,97 @@ public class CarAI : MonoBehaviour
     {
         GetComponent<Rigidbody>().centerOfMass = Vector3.zero;
         CalculateNavMashLayerBite();
+        rb = GetComponent<Rigidbody>();
+    }
+
+    void Update()
+    {
+        Debug.Log(rb.velocity.magnitude);
+        if (Input.GetKeyDown("m"))
+        {
+            if (hfds)
+            {
+                hfds = false;
+            }
+            else if (!hfds && rb.velocity.magnitude > 20)
+            {
+                hfds = true;
+            }
+            Debug.Log(hfds);
+        }
+        if (Input.GetKeyDown("w") || Input.GetKeyDown("s"))
+        {
+            hfds = false;
+        }
+
+        if (ConstructionZone)
+        {
+            steeringWheel.GetComponent<ImageShow>().RedLight();
+        }
+        else if (!hfds && rb.velocity.magnitude > 10)
+        {
+            steeringWheel.GetComponent<ImageShow>().WhiteLight();
+        }
+        else if (hfds)
+        {
+            steeringWheel.GetComponent<ImageShow>().GreenLight();
+        }
+        else if (!hfds)
+        {
+            steeringWheel.GetComponent<ImageShow>().RedLight();
+        }
+        if (Input.GetKeyDown("s"))
+        {
+            ApplyBrakes();
+        }
     }
 
     void FixedUpdate()
     {
 
-       
+        if (!hfds)
+        {
+            if (Input.GetKey("w"))
+            {
+                move = true;
 
-        //if(Input.GetKey("w")){
-                      
+            }
+            else
+            {
+                move = false;
+            }
+        }
+        else
+        {
+            move = true;
+        }
 
-        //    UpdateWheels();
-        //    //ApplySteering();
-        //    //PathProgress();
-        //    backRight.motorTorque = 400 * MovementTorque;
-        //    backLeft.motorTorque = 400 * MovementTorque;
-        //    frontRight.motorTorque = 400 * MovementTorque;
-        //    frontLeft.motorTorque = 400 * MovementTorque;
-        //    //UpdateWheels();
-        //    //ApplySteering();
-        //    //PathProgress();
-        //    Debug.Log("w");
-        //}
-        //else
-        //{
-            UpdateWheels();
-            ApplySteering();
-            PathProgress();
-        //}
+        UpdateWheels();
+        ApplySteering();
+        PathProgress();
+
     }
 
-    private void OnTriggerEnter(Collider other)
+
+
+    private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag == "Construction")
+        if (other.gameObject.tag == "Construction")
         {
-            Debug.Log("a");
-            move = false;
+            hfds = false;
+            ConstructionZone = true;
         }
     }
 
-    
-    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Construction")
+        {
+            ConstructionZone = false;
+        }
+    }
+
+
 
     private void CalculateNavMashLayerBite()
     {
