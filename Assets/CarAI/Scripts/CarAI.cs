@@ -34,7 +34,9 @@ public class CarAI : MonoBehaviour
     public bool Patrol = true;
     public Transform CustomDestination;
     public GameObject steeringWheel;
+    public GameObject attentionSystem;
     public bool ConstructionZone = false;
+    public bool Attention = true;
 
     [HideInInspector] public bool move;// Look at the documentation for a detailed explanation
 
@@ -66,6 +68,22 @@ public class CarAI : MonoBehaviour
     void Update()
     {
         Debug.Log(rb.velocity.magnitude);
+
+        if (Input.GetKeyDown("i"))
+        {
+            if (Attention)
+            {
+                Attention = false;
+                attentionSystem.GetComponent<AttentionManagement>().CloseEye();
+            }
+            else
+            {
+                Attention = true;
+                attentionSystem.GetComponent<AttentionManagement>().OpenEye();
+            }
+ 
+        }
+
         if (Input.GetKeyDown("m"))
         {
             if (hfds)
