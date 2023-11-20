@@ -28,42 +28,39 @@ public class CarPath : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        switch (count)
+        if(other.tag == "Car")
         {
-            case 0:
-                transform.position = cube_pos.transform.position;
-                break;
-            case 1:
-                transform.position = cube_pos2.transform.position;
-                break;
-            case 2:
-                transform.position = cube_pos3.transform.position;
-                break;
-            case 3:
-                transform.position = cube_pos4.transform.position;
-                break;
-            case 4:
-                transform.position = cube_pos5.transform.position;
-                break;
-            case 5:
-                transform.position = cube_pos6.transform.position;
-                break;
-            case 6:
-                transform.position = cube_pos7.transform.position;
-                break;
-            default:
-                break;
-        }
-        if (count == 0)
-        {
-            transform.position = cube_pos.transform.position;
-        }
-        else if(count == 1)
-        {
-            transform.position = cube_pos2.transform.position;
-        }
+            switch (count)
+            {
+                case 0:
+                    transform.position = cube_pos.transform.position;
+                    break;
+                case 1:
+                    transform.position = cube_pos2.transform.position;
+                    break;
+                case 2:
+                    transform.position = cube_pos3.transform.position;
+                    break;
+                case 3:
+                    transform.position = cube_pos4.transform.position;
+                    break;
+                case 4:
+                    transform.position = cube_pos5.transform.position;
+                    break;
+                case 5:
+                    transform.position = cube_pos6.transform.position;
+                    break;
+                case 6:
+                    transform.position = cube_pos7.transform.position;
+                    break;
+                default:
+                    break;
+            }
+      
 
-        count++;
+            count++;
+        }
+        
     }
     
 }

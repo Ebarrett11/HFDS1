@@ -51,6 +51,11 @@ public class CarAI : MonoBehaviour
     private float MovementTorque = 1;
     private bool hfds = false;
     private Rigidbody rb;
+    private bool allowHFDS = true;
+
+
+    private int attentionPhase = 0;
+    private float attentionTimer = 0f;
     void Awake()
     {
         currentWayPoint = 0;
@@ -65,10 +70,18 @@ public class CarAI : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    void PhaseOne()
+    {
+        Debug.Log("Flashing Green");
+    }
+
     void Update()
     {
-        Debug.Log(rb.velocity.magnitude);
 
+       
+        //Debug.Log(rb.velocity.magnitude);
+
+        //attention section
         if (Input.GetKeyDown("i"))
         {
             if (Attention)
@@ -80,9 +93,21 @@ public class CarAI : MonoBehaviour
             {
                 Attention = true;
                 attentionSystem.GetComponent<AttentionManagement>().OpenEye();
+                attentionTimer = 0f;
             }
  
         }
+      
+        //Level 1: if driver is not engaged for 3 seconds, the wheel light indicator begins flashing green
+
+        //Level 2: After level 1, if driver is not engaged for 3 more seconds, the wheel light indicator begins flashing red with beeping audio queues(1 every second) and continuous seat vibration
+
+        //Level 3(Final): After level 2, if driver is not engaged for 3 more seconds, the system will begin flashing red faster on the wheel light indicator, seat will still continuously vibrate, and an audio queue will tell driver to reengage, or system will abort
+
+        //After level warning level 3, the driver will have 3 seconds to reengage, or system will abort
+
+
+
 
         if (Input.GetKeyDown("m"))
         {
@@ -90,7 +115,7 @@ public class CarAI : MonoBehaviour
             {
                 hfds = false;
             }
-            else if (!hfds && rb.velocity.magnitude > 20)
+            else if (!hfds && rb.velocity.magnitude > 20 && allowHFDS)
             {
                 hfds = true;
             }
@@ -101,26 +126,61 @@ public class CarAI : MonoBehaviour
             hfds = false;
         }
 
-        if (ConstructionZone)
+        if (!Attention && hfds)
         {
-            steeringWheel.GetComponent<ImageShow>().RedLight();
+            steeringWheel.GetComponent<ImageShow>().AllowFlashing();
+
+            attentionTimer += Time.deltaTime;
+            if (attentionTimer >= 36 && attentionTimer < 72)
+            {
+                steeringWheel.GetComponent<ImageShow>().FlashingGreen();
+                //Debug.Log("Flashing Green");
+            }
+            else if (attentionTimer >= 72 && attentionTimer < 108)
+            {
+                steeringWheel.GetComponent<ImageShow>().FlashingRed();
+            }
+            else if (attentionTimer >= 108 && attentionTimer < 144)
+            {
+                steeringWheel.GetComponent<ImageShow>().FlashingRedFaster();
+            }
+            else if (attentionTimer >= 144 && attentionTimer < 180)
+            {
+                allowHFDS = false;
+                hfds = false;
+                steeringWheel.GetComponent<ImageShow>().StayRed();
+        
+                steeringWheel.GetComponent<ImageShow>().RedLight();
+
+            }
         }
-        else if (!hfds && rb.velocity.magnitude > 10)
+        else
         {
-            steeringWheel.GetComponent<ImageShow>().WhiteLight();
+            steeringWheel.GetComponent<ImageShow>().DisallowFlashing();
+            if (ConstructionZone)
+            {
+                steeringWheel.GetComponent<ImageShow>().RedLight();
+            }
+            else if (!hfds && rb.velocity.magnitude > 20 && allowHFDS)
+            {
+                steeringWheel.GetComponent<ImageShow>().WhiteLight();
+            }
+            else if (hfds)
+            {
+                steeringWheel.GetComponent<ImageShow>().GreenLight();
+            }
+            else if (!hfds)
+            {
+                steeringWheel.GetComponent<ImageShow>().RedLight();
+            }
+            if (Input.GetKeyDown("s"))
+            {
+                ApplyBrakes();
+            }
         }
-        else if (hfds)
-        {
-            steeringWheel.GetComponent<ImageShow>().GreenLight();
-        }
-        else if (!hfds)
-        {
-            steeringWheel.GetComponent<ImageShow>().RedLight();
-        }
-        if (Input.GetKeyDown("s"))
-        {
-            ApplyBrakes();
-        }
+        
+
+        
     }
 
     void FixedUpdate()
@@ -149,7 +209,16 @@ public class CarAI : MonoBehaviour
 
     }
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Finish")
+        {
+            hfds = false;
+            allowHFDS = false;
+            move = false;
+            allowMovement = false;
+        }
+    }
 
     private void OnTriggerStay(Collider other)
     {

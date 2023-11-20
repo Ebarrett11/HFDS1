@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Construction
+  - Block
+  - Car
   layers:
   - Default
   - TransparentFX

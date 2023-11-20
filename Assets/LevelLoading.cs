@@ -18,14 +18,12 @@ public class LevelLoading : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown("1"))
-        {
-            Debug.Log("scene");
-            SceneManager.LoadScene("demo");
+        {            
+            SceneManager.LoadScene("Scene1");
         }
         if (Input.GetKeyDown("2"))
         {
-            Debug.Log("scene");
-            SceneManager.LoadScene("default");
+            SceneManager.LoadScene("Scene2");
         }
     }
 }
