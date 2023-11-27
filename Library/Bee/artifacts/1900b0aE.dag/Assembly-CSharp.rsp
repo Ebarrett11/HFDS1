@@ -367,6 +367,7 @@
 "Assets/PROMETEO - Car Controller/Scripts/CameraFollow.cs"
 "Assets/PROMETEO - Car Controller/Scripts/PrometeoCarController.cs"
 "Assets/PROMETEO - Car Controller/Scripts/PrometeoTouchInput.cs"
+"Assets/Speed.cs"
 -langversion:9.0
 
 /deterministic

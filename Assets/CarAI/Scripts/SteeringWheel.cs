@@ -11,6 +11,11 @@ public class ImageShow : MonoBehaviour
     public Image imgBlue;
     public Image imgGreen;
     public AudioClip beep;
+    public AudioClip end;
+    public AudioClip chime;
+
+    public int test;
+
 
     private bool allowFlashing = true;
 
@@ -26,8 +31,8 @@ public class ImageShow : MonoBehaviour
 
     private bool playedFinalSound = false;
 
-
-
+    private bool chimePlayed = false;
+    private float defaultVolume = 0f;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -38,6 +43,7 @@ public class ImageShow : MonoBehaviour
         imgGreen.enabled = false;
         imgWhite.enabled = false;
         isImgOn = true;
+        defaultVolume = audioSource.volume;
     }
 
     public void AllowFlashing(){
@@ -45,6 +51,7 @@ public class ImageShow : MonoBehaviour
     }
     public void DisallowFlashing()
     {
+      
         flashingGreen = false;
         flashingRed = false;
         flashingRedFaster = false;
@@ -58,11 +65,31 @@ public class ImageShow : MonoBehaviour
         imgGreen.enabled = false;
         imgWhite.enabled = true;
         isImgOn = true;
+        chimePlayed = false;
 
     }
 
     public void GreenLight()
     {
+
+        audioSource.clip = chime;
+        if (!chimePlayed)
+        {
+            audioSource.Play();
+            chimePlayed = true;
+        }
+
+        imgBlue.enabled = false;
+        imgRed.enabled = false;
+        imgGreen.enabled = true;
+        imgWhite.enabled = false;
+        isImgOn = true;
+
+    }
+
+    public void GreenLightPhase()
+    {
+
         imgBlue.enabled = false;
         imgRed.enabled = false;
         imgGreen.enabled = true;
@@ -73,6 +100,7 @@ public class ImageShow : MonoBehaviour
 
     public void BlueLight()
     {
+
         imgBlue.enabled = true;
         imgRed.enabled = false;
         imgGreen.enabled = false;
@@ -82,6 +110,8 @@ public class ImageShow : MonoBehaviour
 
     public void RedLight()
     {
+
+        chimePlayed = false;
         imgBlue.enabled = false;
         imgRed.enabled = true;
         imgGreen.enabled = false;
@@ -96,21 +126,28 @@ public class ImageShow : MonoBehaviour
     }
     public void FlashingRed()
     {
+
+        audioSource.clip = beep;
         flashingGreen = false;
         flashingRed = true;
         //Debug.Log("true");
     }
     public void FlashingRedFaster()
     {
+        audioSource.volume = defaultVolume;
+
         flashingRed = false;
         flashingRedFaster = true;
+        //audioSource.clip = voicePrompt;
         //Debug.Log("true");
     }
     public void StayRed()
     {
+        audioSource.volume = defaultVolume;
+
         if (!playedFinalSound)
         {
-            audioSource.clip = beep;
+            audioSource.clip = end;
             audioSource.Play();
             playedFinalSound = true;
         }
@@ -142,7 +179,7 @@ public class ImageShow : MonoBehaviour
                     else
                     {
 
-                        GreenLight();
+                        GreenLightPhase();
                         isGreen = true;
                     }
                 }
@@ -153,6 +190,7 @@ public class ImageShow : MonoBehaviour
                 flashingTimer += Time.deltaTime;
                 if (flashingTimer - lastTimerValue >= 4f)
                 {
+
                     //GetComponent<AudioSource>().Play();
                     audioSource.Play();
                     lastTimerValue = flashingTimer;

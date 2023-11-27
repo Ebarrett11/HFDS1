@@ -64,6 +64,7 @@
     <Compile Include="Assets\CarAI\Scripts\SensorManager.cs" />
     <Compile Include="Assets\CarAI\Scripts\AttentionManagement.cs" />
     <Compile Include="Assets\CarAI\Scripts\SteeringWheel.cs" />
+    <Compile Include="Assets\Speed.cs" />
     <Compile Include="Assets\PROMETEO - Car Controller\Scripts\PrometeoCarController.cs" />
   </ItemGroup>
   <ItemGroup>

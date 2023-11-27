@@ -3,6 +3,8 @@ using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
+
 
 public class CarAI : MonoBehaviour
 {
@@ -34,6 +36,7 @@ public class CarAI : MonoBehaviour
     public bool Patrol = true;
     public Transform CustomDestination;
     public GameObject steeringWheel;
+    public GameObject speedText;
     public GameObject attentionSystem;
     public bool ConstructionZone = false;
     public bool Attention = true;
@@ -52,10 +55,13 @@ public class CarAI : MonoBehaviour
     private bool hfds = false;
     private Rigidbody rb;
     private bool allowHFDS = true;
-
+    public float val = 20f;
 
     private int attentionPhase = 0;
     private float attentionTimer = 0f;
+
+    private Text actualSpeedText;
+    private AudioSource audioSource;
     void Awake()
     {
         currentWayPoint = 0;
@@ -68,6 +74,10 @@ public class CarAI : MonoBehaviour
         GetComponent<Rigidbody>().centerOfMass = Vector3.zero;
         CalculateNavMashLayerBite();
         rb = GetComponent<Rigidbody>();
+        actualSpeedText = speedText.GetComponent<Text>();
+        audioSource = GetComponent<AudioSource>();
+        Attention = true;
+        hfds = false;
     }
 
     void PhaseOne()
@@ -77,25 +87,32 @@ public class CarAI : MonoBehaviour
 
     void Update()
     {
+        audioSource.pitch = val * rb.velocity.magnitude;
 
-       
+        actualSpeedText.text = Mathf.RoundToInt(rb.velocity.magnitude*2.98f).ToString();
         //Debug.Log(rb.velocity.magnitude);
 
         //attention section
         if (Input.GetKeyDown("i"))
         {
+            Debug.Log("Attention");
+
             if (Attention)
             {
                 Attention = false;
                 attentionSystem.GetComponent<AttentionManagement>().CloseEye();
+                Debug.Log("Close");
+
             }
             else
             {
                 Attention = true;
                 attentionSystem.GetComponent<AttentionManagement>().OpenEye();
                 attentionTimer = 0f;
+                Debug.Log("Open");
+
             }
- 
+
         }
       
         //Level 1: if driver is not engaged for 3 seconds, the wheel light indicator begins flashing green
@@ -190,6 +207,7 @@ public class CarAI : MonoBehaviour
         {
             if (Input.GetKey("w"))
             {
+                Debug.Log("W");
                 move = true;
 
             }
