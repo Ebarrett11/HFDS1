@@ -53,14 +53,19 @@ public class CarAI : MonoBehaviour
     private int Fails;
     private float MovementTorque = 1;
     private bool hfds = false;
+    private bool hfdsTimerBlueLight = false;
+
     private Rigidbody rb;
     private bool allowHFDS = true;
     public float val = 20f;
 
     private int attentionPhase = 0;
     private float attentionTimer = 0f;
+    private float manualTimer = 0f;
 
-    private Text actualSpeedText;
+    public Text actualSpeedText;
+    public Text metricSpeedText;
+
     private AudioSource audioSource;
     void Awake()
     {
@@ -74,7 +79,9 @@ public class CarAI : MonoBehaviour
         GetComponent<Rigidbody>().centerOfMass = Vector3.zero;
         CalculateNavMashLayerBite();
         rb = GetComponent<Rigidbody>();
-        actualSpeedText = speedText.GetComponent<Text>();
+        //actualSpeedText = speedText.GetComponent<Text>();
+        //metricSpeedText = speedText.GetComponent<Text>();
+
         audioSource = GetComponent<AudioSource>();
         Attention = true;
         hfds = false;
@@ -90,6 +97,8 @@ public class CarAI : MonoBehaviour
         audioSource.pitch = val * rb.velocity.magnitude;
 
         actualSpeedText.text = Mathf.RoundToInt(rb.velocity.magnitude*2.98f).ToString();
+        metricSpeedText.text = Mathf.RoundToInt(rb.velocity.magnitude * 2.98f* 1.60934f).ToString();
+
         //Debug.Log(rb.velocity.magnitude);
 
         //attention section
@@ -131,10 +140,13 @@ public class CarAI : MonoBehaviour
             if (hfds)
             {
                 hfds = false;
+                hfdsTimerBlueLight = false;
+
             }
             else if (!hfds && rb.velocity.magnitude > 20 && allowHFDS)
             {
                 hfds = true;
+                hfdsTimerBlueLight = true;
             }
             Debug.Log(hfds);
         }
@@ -143,11 +155,43 @@ public class CarAI : MonoBehaviour
             hfds = false;
         }
 
+        if (hfdsTimerBlueLight)
+        {
+            Debug.Log("true");
+            if (Input.GetKey("w") || Input.GetKey("s"))
+            {
+                Debug.Log(manualTimer);
+                manualTimer += Time.deltaTime;
+                if (manualTimer >= 60f)
+                {
+                    Debug.Log("Turn on Manual");
+                    hfdsTimerBlueLight = false;
+                    manualTimer = 0f;
+
+                }
+
+            }
+        }
+        
+        if (Input.GetKeyUp("w") || Input.GetKeyUp("s"))
+        {
+            if (hfdsTimerBlueLight)
+            {
+                hfds = true;
+            }
+            manualTimer = 0f;
+        }
+
         if (!Attention && hfds)
         {
             steeringWheel.GetComponent<ImageShow>().AllowFlashing();
 
             attentionTimer += Time.deltaTime;
+            if(attentionTimer <= 36)
+            {
+                steeringWheel.GetComponent<ImageShow>().GreenLight();
+
+            }
             if (attentionTimer >= 36 && attentionTimer < 72)
             {
                 steeringWheel.GetComponent<ImageShow>().FlashingGreen();
@@ -165,11 +209,32 @@ public class CarAI : MonoBehaviour
             {
                 allowHFDS = false;
                 hfds = false;
+                hfdsTimerBlueLight = false;
+
                 steeringWheel.GetComponent<ImageShow>().StayRed();
         
                 steeringWheel.GetComponent<ImageShow>().RedLight();
 
             }
+        }
+        else if(!Attention && !hfds)
+        {
+            if (!hfds && rb.velocity.magnitude > 20)
+            {
+                if (!hfds && hfdsTimerBlueLight)
+                {
+                    steeringWheel.GetComponent<ImageShow>().BlueLight();
+                    Attention = true;
+                    attentionSystem.GetComponent<AttentionManagement>().OpenEye();
+                    attentionTimer = 0f;
+
+                }
+                else
+                {
+                    steeringWheel.GetComponent<ImageShow>().WhiteLight();
+                }
+            }  
+            
         }
         else
         {
@@ -180,7 +245,15 @@ public class CarAI : MonoBehaviour
             }
             else if (!hfds && rb.velocity.magnitude > 20 && allowHFDS)
             {
-                steeringWheel.GetComponent<ImageShow>().WhiteLight();
+                if(!hfds && hfdsTimerBlueLight)
+                {
+                    steeringWheel.GetComponent<ImageShow>().BlueLight();
+
+                }
+                else
+                {
+                    steeringWheel.GetComponent<ImageShow>().WhiteLight();
+                }
             }
             else if (hfds)
             {
@@ -203,23 +276,28 @@ public class CarAI : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (!hfds)
+        //if (!hfds)
+        //{
+        if (Input.GetKey("w") || hfds)
         {
-            if (Input.GetKey("w"))
-            {
-                Debug.Log("W");
-                move = true;
+            //Debug.Log("W");
+            move = true;
 
-            }
-            else
-            {
-                move = false;
-            }
         }
         else
         {
-            move = true;
+            move = false;
         }
+            
+            //else
+            //{
+            //    move = false;
+            //}
+        //}
+        //else
+        //{
+        //    move = true;
+        //}
 
         UpdateWheels();
         ApplySteering();
@@ -243,6 +321,7 @@ public class CarAI : MonoBehaviour
         if (other.gameObject.tag == "Construction")
         {
             hfds = false;
+            hfdsTimerBlueLight = false; ;
             ConstructionZone = true;
         }
     }
